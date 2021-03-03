@@ -19,14 +19,13 @@ public class GreetingController {
     }
 
 
-
     @GetMapping("/greet")
     public String greet() {
         return greetingService.sayHi();
     }
 
     @Autowired
-    public void setGreetingService(@Qualifier("test2") Greeting greetingService) {
+    public void setGreetingService(@Qualifier("greetingService2") Greeting greetingService) {
         this.greetingService = greetingService;
     }
 }

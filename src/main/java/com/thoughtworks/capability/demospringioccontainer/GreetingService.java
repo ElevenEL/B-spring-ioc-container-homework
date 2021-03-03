@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import static org.springframework.beans.factory.config.ConfigurableBeanFactory.SCOPE_PROTOTYPE;
 
-
+@Service
 public class GreetingService implements Greeting {
 
     public GreetingService() {
