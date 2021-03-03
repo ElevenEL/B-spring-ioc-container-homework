@@ -25,7 +25,7 @@ public class GreetingController {
     }
 
     @Autowired
-    public void setGreetingService(@Qualifier("greetingService2") Greeting greetingService) {
-        this.greetingService = greetingService;
+    public void setGreetingService(Greeting greetingService2) {
+        this.greetingService = greetingService2;
     }
 }
