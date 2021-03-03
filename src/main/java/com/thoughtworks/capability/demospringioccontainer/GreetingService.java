@@ -1,19 +1,22 @@
 package com.thoughtworks.capability.demospringioccontainer;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import static org.springframework.beans.factory.config.ConfigurableBeanFactory.SCOPE_PROTOTYPE;
 
-@Service
-@Scope(SCOPE_PROTOTYPE)
-public class GreetingService {
+
+public class GreetingService implements Greeting {
 
     public GreetingService() {
         System.out.println("GreetingService init");
     }
 
-    String sayHi() {
+    @Override
+    public String sayHi() {
         return "hello world";
     }
+
+
 }
