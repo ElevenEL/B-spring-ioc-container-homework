@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Bar {
 
-    private Foo foo;
+    private final Foo foo;
 
     public Bar(Foo foo) {
         this.foo = foo;
